@@ -1,0 +1,7 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+    <view class="userinfo">
+        用户名称：{{username}}
+        <button bind:tap="clickMe">点击我</button>
+    </view>
+</view>
