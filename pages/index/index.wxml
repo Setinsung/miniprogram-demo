@@ -16,6 +16,7 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    <button bind:tap="toUser">跳转</button>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

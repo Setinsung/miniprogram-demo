@@ -5,10 +5,26 @@ Page({
      * 页面的初始数据
      */
     data: {
-        username: "wtf"
+        userInfo: {
+            nickName: "wtf",
+            avatarUrl: "/images/test.jpg"
+        }
     },
     clickMe() {
         console.log('点击');
+    },
+    getMyInfo(){
+        wx.getUserProfile({
+            desc: '展示用户信息', 
+            success: (res) => {
+              console.log(res)
+              this.setData({
+                userInfo: res.userInfo,
+                hasUserInfo: true
+              })
+            }
+          })
+       
     },
 
     /**
@@ -16,8 +32,8 @@ Page({
      */
     onLoad(options) {
         wx.setNavigationBarColor({
-            frontColor: "#fff",
-            backgroundColor: "#000"
+            frontColor: "#ffffff",
+            backgroundColor: "#000000"
         })
     },
 

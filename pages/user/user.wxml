@@ -1,7 +1,11 @@
 <!--pages/user/user.wxml-->
 <view class="container">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" />
     <view class="userinfo">
-        用户名称：{{username}}
+        <text class="uname">
+            用户名称：{{userInfo.nickName}}
+        </text>
         <button bind:tap="clickMe">点击我</button>
+        <button bind:tap="getMyInfo">点击获取头像和昵称</button>
     </view>
 </view>
